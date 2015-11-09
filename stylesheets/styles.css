@@ -246,6 +246,11 @@ footer {
   }
 }
 
+@media screen and (max-width: 768px) {
+.rwd-break {
+display:none }
+}
+
 @media print {
   body {
     padding:0.4in;
