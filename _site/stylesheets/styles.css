@@ -183,10 +183,22 @@ footer {
   bottom:50px;
 }
 
-.project h1, h2 {
-  margin-bottom: 0px;
+.project {
+  margin-bottom: 10px;
+  border-style: solid;
+  border-radius: 10px;
+}
+.project  h2 {
+  margin-bottom: 10px;
 }
 
+.project h2, h3 {
+  text-align: center;
+}
+
+.project p {
+  margin-left: 5px;
+}
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
