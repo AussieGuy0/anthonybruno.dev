@@ -183,6 +183,10 @@ footer {
   bottom:50px;
 }
 
+.project h1, h2 {
+  margin-bottom: 0px;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
