@@ -15,7 +15,7 @@ title: Anthony Bruno
 <ul>
 	<li> Programming (C++, Java) </li>
 	<li> Web Development (HTML, CSS, PHP, JavaScript) </li>
-	<li> Databases (SQLite, XML) </li>
+	<li> Databases/Data Modelling (SQLite, XML, UML) </li>
   <li> IDE's/Editors (Netbeans, Geany, vim, Atom) </li>
 </ul>
 </p>
@@ -23,3 +23,8 @@ title: Anthony Bruno
 <a  class="anchor"  aria-hidden="true"><span class="octicon octicon-link"></span></a>Interests</h3>
 
 <p>I like doing online courses, including <a href="http://www.freecodecamp.com/aussieguy0">Free Code Camp</a> and <a href="https://www.hackerrank.com/AussieGuy">Hackerrank</a>. I'm also a huge soccer fan and support Adelaide United (C'mon you reds!).</p>
+
+<p> <strong> Latest blog post:
+{% for post in site.posts limit:1 %}
+<a href='{{post.url}}'>{{post.title}}</a> - <span class='date'>{{post.date | date_to_string}}</span>
+{% endfor %} </strong> <p>
