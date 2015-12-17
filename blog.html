@@ -12,6 +12,7 @@ full_posts: 5
           <h2><a href='{{post.url}}'>{{post.title}}</a></h2>
           <div class='body'>{{post.content}}</div>
   </div>
+  <hr>
  	{% else %}
 	{%if forloop.index == page.full_posts %}
  	<h3>Older Posts </h3>
