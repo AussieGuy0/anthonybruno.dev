@@ -198,6 +198,11 @@ footer {
 .project p {
   margin-left: 5px;
 }
+
+#bloglist {
+  padding-left: 0px;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
