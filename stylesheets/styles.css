@@ -206,6 +206,10 @@ footer {
   padding-bottom: 5px;
 }
 
+#webdev, #programming {
+  text-align: center;
+}
+
 #bloglist {
   padding-left: 0px;
 }
