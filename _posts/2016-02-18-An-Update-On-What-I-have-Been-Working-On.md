@@ -20,6 +20,6 @@ So far, I have got the JSON call to work. However, passing values from the retri
 
 ## 300 points!
 
-![Score Image](/media/CodeCampScore)
+![Score Image](/media/CodeCampScore.png)
 
 I managed to hit **300 points** on FreeCodeCamp! For those who don't know, a point is given each time a for each challenge or project completed. I'm proud that I've got this far in the course. Hopefully I can see it right to the end!
