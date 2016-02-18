@@ -184,8 +184,7 @@ footer {
 
 .project {
   margin-bottom: 10px;
-  border-style: solid;
-  border-radius: 10px;
+  border-bottom-style: groove;
 }
 .project  h2 {
   margin-bottom: 10px;
@@ -205,6 +204,10 @@ footer {
   margin-right: auto;
   display: block;
   padding-bottom: 5px;
+}
+
+#webdev, #programming {
+  text-align: center;
 }
 
 #bloglist {
