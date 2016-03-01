@@ -10,7 +10,7 @@ One of the projects for [FreeCodeCamp](http://freecodecamp.com) is to make a Pom
 
 My pomodoro timer is functionally complete. The timer swaps between work/rest periods and also allows the user to change how long each type of period lasts. However, presentation is lacking. I won't be happy until it looks as good as it runs! 
 
-[Click Here](http://codpen.io/AussieGuy0/pen/jWraeG) if you want to see what it looks like so far.
+[Click Here](http://codepen.io/AussieGuy0/pen/jWraeG) if you want to see what it looks like so far.
 
 ## Local Weather
 
