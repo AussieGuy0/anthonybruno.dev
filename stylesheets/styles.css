@@ -2,9 +2,15 @@
 
 body {
   padding:50px;
-  font:15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight:300;
   color: #4D4D4D;
+}
+
+.post {
+  font-size: 18px;
+  text-align: justify;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
