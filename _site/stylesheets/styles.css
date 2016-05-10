@@ -4,6 +4,12 @@ body {
   padding:50px;
   font:15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight:300;
+  color: #4D4D4D;
+}
+
+.post {
+  text-align: justify;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,7 +51,7 @@ a small {
 }
 
 .wrapper {
-  width:860px;
+  width:1000px;
   margin:0 auto;
 }
 
@@ -159,7 +165,7 @@ header ul a strong {
 }
 
 section {
-  width:500px;
+  width:700px;
   float:right;
   padding-bottom:50px;
 }
@@ -215,6 +221,10 @@ footer {
 }
 
 @media print, screen and (max-width: 960px) {
+
+  body {
+    font-size: 16px;
+  }
 
   div.wrapper {
     width:auto;
