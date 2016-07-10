@@ -1,1 +1,3 @@
 url: http://anthonybruno.me
+gems:
+  - jekyll-seo-tag
