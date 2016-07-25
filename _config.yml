@@ -1,3 +1,5 @@
 url: http://anthonybruno.me
+author:
+  twitter: AnthonyBrunoAUS
 gems:
   - jekyll-seo-tag
