@@ -1,5 +1,6 @@
+title: Anthony Bruno
+description: Personal website of Anthony Bruno, an Australian computer science student with a passion for programming.
 url: http://anthonybruno.me
-author:
-  twitter: AnthonyBrunoAUS
+author: AnthonyBrunoAUS
 gems:
   - jekyll-seo-tag

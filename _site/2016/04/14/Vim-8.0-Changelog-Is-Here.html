@@ -11,23 +11,23 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!-- Begin Jekyll SEO tag v2.0.0 -->
-<title>An update on what I have been working on - Anthony Bruno</title>
-<meta property="og:title" content="An update on what I have been working on" />
-<meta name="description" content="Long time no post! I thought I would give an update on how I’m spending my (rapidly decreasing) holidays." />
-<meta property="og:description" content="Long time no post! I thought I would give an update on how I’m spending my (rapidly decreasing) holidays." />
-<link rel="canonical" href="http://anthonybruno.me/2016/02/18/An-Update-On-What-I-have-Been-Working-On.html" />
-<meta property="og:url" content="http://anthonybruno.me/2016/02/18/An-Update-On-What-I-have-Been-Working-On.html" />
+<title>Vim 8.0 Changelog Is Here - Anthony Bruno</title>
+<meta property="og:title" content="Vim 8.0 Changelog Is Here" />
+<meta name="description" content="" />
+<meta property="og:description" content="" />
+<link rel="canonical" href="http://anthonybruno.me/2016/04/14/Vim-8.0-Changelog-Is-Here.html" />
+<meta property="og:url" content="http://anthonybruno.me/2016/04/14/Vim-8.0-Changelog-Is-Here.html" />
 <meta property="og:site_name" content="Anthony Bruno" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2016-02-18T00:00:00+10:30" />
+<meta property="article:published_time" content="2016-04-14T00:00:00+09:30" />
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "An update on what I have been working on",
-    "datePublished": "2016-02-18T00:00:00+10:30",
-    "description": "Long time no post! I thought I would give an update on how I’m spending my (rapidly decreasing) holidays.",
-    "url": "http://anthonybruno.me/2016/02/18/An-Update-On-What-I-have-Been-Working-On.html"
+    "headline": "Vim 8.0 Changelog Is Here",
+    "datePublished": "2016-04-14T00:00:00+09:30",
+    "description": "",
+    "url": "http://anthonybruno.me/2016/04/14/Vim-8.0-Changelog-Is-Here.html"
   }
 </script>
 <!-- End Jekyll SEO tag -->
@@ -47,29 +47,25 @@
       </header>
       <section>
 	<div class = 'post'>
-<span class = 'date'> 18 Feb 2016</span>
-<h1>An update on what I have been working on</h1>
-<div class = 'body'><p>Long time no post! I thought I would give an update on how I’m spending my (rapidly decreasing) holidays.</p>
+<span class = 'date'> 14 Apr 2016</span>
+<h1>Vim 8.0 Changelog Is Here</h1>
+<div class = 'body'><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/544px-Vimlogo.svg.png" alt="Vim Logo" height="50%" width="50%" /></p>
 
-<h2 id="pomodoro-timer">Pomodoro Timer</h2>
+<p>Vim, the modal text editor and the catalyst of many arguments between developers is nearing it’s next major update, 8.0. Here are my favourite features that this update will include.</p>
 
-<p>One of the projects for <a href="http://freecodecamp.com">FreeCodeCamp</a> is to make a Pomodoro timer. <em>What is a Pomdoro timer</em>, you ask? It is a timer that switches between 25 minute ‘work’ and 5 minute ‘rest’ periods. It is a way for people to increase productivity as a person working under this method has (supposedly) better focus during the work period, and allows the brain a rest during the break periods.</p>
+<h2 id="asynchronous-support">Asynchronous Support</h2>
+<p>One of the big features of Neovim is finally coming to Vim. Asynchronous support introduces multi-thread functionality. This means plugins will be able to run in the background and not freeze the editor when functioning. For example, Syntastic, (Syntax Checking) could continually run in the background and check your code without holding Vim to ransom.</p>
 
-<p>My pomodoro timer is functionally complete. The timer swaps between work/rest periods and also allows the user to change how long each type of period lasts. However, presentation is lacking. I won’t be happy until it looks as good as it runs!</p>
+<h2 id="inbuilt-package-support">Inbuilt Package Support</h2>
+<p>For a long time, the best way to install a lot of plugins was to use something like Vundle. With Vim 8.0. a group of plugins will be able to be chucked into a folder, and Vim will handle them and (possibly) keep it updated!</p>
 
-<p><a href="http://codepen.io/AussieGuy0/pen/jWraeG">Click Here</a> if you want to see what it looks like so far.</p>
+<h2 id="ditched-support-for-ms-dos">Ditched Support for MS-DOS</h2>
+<p>You read that title right. Vim was still being supported for an OS that came out <strong>34 years ago</strong>. The text editor, however, will be too large of a program for MS-DOS to handle. If you’re one of the people affected by this, maybe this will give you the push to upgrade your OS.</p>
 
-<h2 id="local-weather">Local Weather</h2>
+<h2 id="assert-functions-for-plugin-developers">Assert Functions for Plugin Developers</h2>
+<p>Plugin developers will be thrown a bone in the new update with the addition of assert functions. This allows the easier creation of tests, which should help reduce bugs in plugins in the long run.</p>
 
-<p>Another FreeCodeCamp project. This has a very simple function, display the weather at the user’s location. It uses an JSON call and the API of <a href="http://openweathermap.org">Open Weather Map</a> to retrieve the weather.</p>
-
-<p>So far, I have got the JSON call to work. However, passing values from the retrieved object to variables is not working for me yet. I’m sure if I spend a bit of time on it I’ll get it to work.</p>
-
-<h2 id="points">300 points!</h2>
-
-<p><img src="/media/CodeCampScore.png" alt="Score Image" /></p>
-
-<p>I managed to hit <strong>300 points</strong> on FreeCodeCamp! For those who don’t know, a point is given each time a for each challenge or project completed. I’m proud that I’ve got this far in the course. Hopefully I can see it right to the end!</p>
+<p>To see the full changelog click here: <a href="https://github.com/vim/vim/blob/master/runtime/doc/version8.txt">Vim 8.0 changelog</a></p>
  </div>
 </div>
 <div id="disqus_thread"></div>
