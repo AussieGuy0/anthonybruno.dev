@@ -38,9 +38,13 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#39c;
+  color:#64B058;
   font-weight:400;
   text-decoration:none;
+}
+
+h1 a {
+    color: #222;
 }
 
 a small {

@@ -4,3 +4,4 @@ url: http://anthonybruno.me
 author: AnthonyBrunoAUS
 gems:
   - jekyll-seo-tag
+highlighter: rouge
