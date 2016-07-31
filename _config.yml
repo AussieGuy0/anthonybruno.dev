@@ -5,3 +5,4 @@ author: AnthonyBrunoAUS
 gems:
   - jekyll-seo-tag
 highlighter: rouge
+google_analytics: UA-81683429-1
