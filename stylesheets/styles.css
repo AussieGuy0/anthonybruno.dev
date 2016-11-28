@@ -260,7 +260,13 @@ footer {
   }
 
   .resbreak {
-    display:none }
+    display:none 
+  }
+
+  .view a {
+    padding-right: 5px;
+  }
+
 }
 
 @media print, screen and (max-width: 720px) {
@@ -279,6 +285,10 @@ footer {
   pre, code {
     word-wrap:normal;
     }
+
+  header {
+    text-align: center;
+  }
 }
 
 @media print, screen and (max-width: 480px) {
