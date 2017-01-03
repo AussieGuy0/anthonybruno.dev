@@ -31,7 +31,7 @@ JavaScript, node.js, HTML and CSS.
 **How**: Keep working on [FreeCodeCamp](https://www.freecodecamp.com), start and finish courses:
 [JavaScript30](https://javascript30.com/), [Practical
 Javascript](https://watchandcode.com/p/practical-javascript) and the node.js
-path on [pluralsight](https*://app.pluralsight.com/paths/skills/node-js)
+path on [pluralsight](https://app.pluralsight.com/paths/skills/node-js)
 
 ### Blog more
 
