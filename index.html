@@ -1,28 +1,11 @@
 ---
 layout: master
-title: Home page
+title: Blog
 ---
-
-<h3>Welcome!</h3>
-
-<p>I'm Anthony Bruno, a Computer Science graduate with a passion for Java and Web Development, and this is my personal website. 
- I also work at <a href="http://www.sintelix.com/about-us.php/">Semantic Sciences</a> developing awesome Java applications.</p>
-
-<h3>Skills</h3>
-<p>During my course, I have developed a wide range of skills. These include:
-<ul>
-	<li> Programming (C++, Java) </li>
-	<li> Web Development (HTML, CSS, PHP, JavaScript) </li>
-	<li> Databases/Data Modelling (MySQL, SQLite, XML, UML) </li>
-    <li> IDE's/Editors (Netbeans, IntelliJ, vim, Atom) </li>
-</ul>
-</p>
-
-<h3>Interests</h3>
-
-<p>I like doing online courses, including <a href="http://www.freecodecamp.com/aussieguy0">Free Code Camp</a> and <a href="https://www.hackerrank.com/AussieGuy">Hackerrank</a>. I'm also a huge soccer fan and support Adelaide United (C'mon you reds!).</p>
-
-<p> <strong> Latest blog post:
-{% for post in site.posts limit:1 %}
-<a href='{{post.url}}'>{{post.title}}</a></strong> - <span class='date'>{{post.date | date_to_string}}</span>
-{% endfor %}  <p>
+  {% for post in site.posts%}
+      <div>
+          <h2 style="margin-bottom:0px;"><a href="{{ post.url }}">{{ post.title }}</a></h2> 
+          <span>{{post.date | date_to_string}}</span>
+      </div>
+      <br>
+  {% endfor %}
