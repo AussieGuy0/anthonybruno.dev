@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
 body {
   padding:50px;
   font:16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7,8 +5,6 @@ body {
   color: #4D4D4D;
 }
 
-.post {
-}
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
@@ -188,6 +184,9 @@ footer {
   float:left;
   position:fixed;
   bottom:50px;
+  font-size: 150%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .project {
