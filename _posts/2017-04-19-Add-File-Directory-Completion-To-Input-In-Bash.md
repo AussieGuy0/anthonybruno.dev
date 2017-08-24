@@ -2,6 +2,7 @@
 layout: post
 title: Add file/directory auto-completion to user input in Bash
 published: true
+excerpt: A small guide on how to add path auto-completion to Bash scripts
 ---
 
 The most common way to get input from a user in a Bash script is to use the read function like so:
