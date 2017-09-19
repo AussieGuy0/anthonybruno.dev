@@ -2,7 +2,6 @@ body {
   padding:50px;
   font:16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight:300;
-  color: #4D4D4D;
 }
 
 
@@ -219,6 +218,10 @@ footer {
 
 #bloglist {
   padding-left: 0px;
+}
+
+.post {
+    font-size: 18px;
 }
 
 @media print, screen and (max-width: 960px) {
