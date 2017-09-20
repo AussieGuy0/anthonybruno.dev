@@ -1,0 +1,11 @@
+---
+layout: master
+title: Home
+---
+  {% for link in site.links%}
+      <div>
+          <a href={{link.url}}> {{link.title}} </a>
+          <div> {{ link.summary }} </div>
+      </div>
+      <hr>
+  {% endfor %}

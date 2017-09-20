@@ -5,3 +5,5 @@ author: AnthonyBrunoAUS
 gems:
   - jekyll-seo-tag
 highlighter: rouge
+collections:
+  - links
