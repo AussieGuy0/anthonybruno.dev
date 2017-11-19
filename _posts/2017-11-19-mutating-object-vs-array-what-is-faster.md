@@ -33,9 +33,9 @@ To test mutating the variable using an array, we have this code:
 
 {% highlight Java %}
 private void mutateWithArrayTest() {
-	int toMutate = 5;
-	for (int i = 0; i < testsNum; i++) {
- 		int[] array = { toMutate };
+    int toMutate = 5;
+    for (int i = 0; i < testsNum; i++) {
+ 	int[] array = { toMutate };
         mutate(array);
         int mutated = array[0];
     }
@@ -51,11 +51,11 @@ Finally, to test mutating the variable with an object, we have this:
 {% highlight Java %}
 private void mutateWithObjectTest() {
 	int toMutate = 5;
-    for (int i = 0; i < testsNum; i++) {
-        IntWrapper intWrapper = new IntWrapper(toMutate);
-        mutate(intWrapper);
-        int mutated = intWrapper.getWrapped();
-    }
+        for (int i = 0; i < testsNum; i++) {
+            IntWrapper intWrapper = new IntWrapper(toMutate);
+            mutate(intWrapper);
+            int mutated = intWrapper.getWrapped();
+        }
 }
 
 private void mutate(IntWrapper intWrapper) {
