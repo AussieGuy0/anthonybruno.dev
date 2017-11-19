@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Mutating object vs single element array in java, what is faster?
-published: false
+title: Mutating an object vs a single element array in Java, which is faster?
+published: true
 ---
-Recently a coworker asked what he should do to do pass an `int` into a method,
-change it and get the changed variable after the method ended. Ignoring the
-anti-pattern of programming via side-effects, I suggested wrapping the variable
-in an `Object` with a getter and setter. Another coworker suggested creating a
-single element array BLA.
+Recently a coworker asked what he should do to pass an `int` into a method,
+change it, and then get the changed variable after the method ends. Apparently simply returning it was not an option! I suggested wrapping 
+the variable in an `Object` with a getter and setter. Another coworker suggested 
+creating a single element int array containing the value. 
 
 A *somewhat* heated discussion occurred as I debated it's more semantically
 correct to use an object, while my coworker suggested that creating and using an
 array is faster. 
+
+But we're programmers, let's write some code to figure out which is faster!
 
 ## The Code
 Here's the testing code that simply runs the test, records how long it takes 
@@ -28,13 +29,13 @@ private void timeTests(Runnable test, String type) {
 }
 {% endhighlight %}
 
-To test the array, we have this code
+To test mutating the variable using an array, we have this code:
 
 {% highlight Java %}
 private void mutateWithArrayTest() {
 	int toMutate = 5;
 	for (int i = 0; i < testsNum; i++) {
- 		int[] array = {toMutate};
+ 		int[] array = { toMutate };
         mutate(array);
         int mutated = array[0];
     }
@@ -45,7 +46,7 @@ private void mutate(int[] toMutate) {
 }
 {% endhighlight %}
 
-Finally, to test the object we have this
+Finally, to test mutating the variable with an object, we have this:
 
 {% highlight Java %}
 private void mutateWithObjectTest() {
@@ -78,3 +79,13 @@ private static class IntWrapper {
     }
 }
 {% endhighlight %}
+
+## The Results
+
+![Graph](/media/mutateIntGraph.jpg)
+    
+After running each test a billion times, 10 times each, the results are surprising.
+There is practically **no** difference in speed when using an array vs an
+object. This shows how efficient object creation is in Java, demonstrating that java programmers shouldn't be scared to create objects. 
+
+It also shows that I was right! ;)
