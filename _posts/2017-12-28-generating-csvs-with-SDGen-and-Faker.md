@@ -66,17 +66,6 @@ generate values for these:
         .addField("Last Name", () -> faker.name().lastName())
 ```
 
-We also want to add an 'Age' field. To do this, we can use `SDGen`'s inbuilt
-`IntGenerator`. We can give it a sensible minimum and maximum value to limit the
-range of numbers it will generate. `SDGen` provides generators for all primitive types. 
-
-```java
-Gen.start()
-    .addField("First Name", () -> faker.name().firstName())
-    .addField("Last Name", () -> faker.name().lastName())
-    .addField("Age", new IntGenerator(18, 80))
-```
-
 *Note: Using lambdas (e.g. `() -> faker.name().firstName()` is the equivalent of
         writing:*
         
@@ -88,6 +77,19 @@ new Generator() {
     }
 }
 ```
+
+We also want to add an 'Age' field. To do this, we can use `SDGen`'s inbuilt
+`IntGenerator`. We can give it a sensible minimum and maximum value to limit the
+range of numbers it will generate. `SDGen` provides generators for all primitive types. 
+
+
+```java
+Gen.start()
+    .addField("First Name", () -> faker.name().firstName())
+    .addField("Last Name", () -> faker.name().lastName())
+    .addField("Age", new IntGenerator(18, 80))
+```
+
 
 Next, we specify how many rows to generate by using the `generate` method.  We also want to select the format of the generated data. We
 will be using `asCsv` to generate the data in CSV format. `SDGen` also supports
