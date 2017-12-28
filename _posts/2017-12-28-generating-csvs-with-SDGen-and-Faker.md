@@ -14,7 +14,7 @@ into play.
 developers generate randomised data files for testing purposes. It supports CSV
 and Fixed Width formats, with more formats such as JSON planned for the future.
 
-This guide will show you how to generate a simple CSV file using [SDGen]() and
+This guide will show you how to generate a simple CSV file using [SDGen](https://github.com/AussieGuy0/SDgen) and
 [Faker](https://github.com/DiUS/java-faker). Faker will be used to assist creating
 random values.
 
