@@ -7,7 +7,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
-  margin:0 0 10px;
+  margin:0 0 5px;
 }
 
 p, ul, ol, table, pre, dl {
@@ -189,7 +189,7 @@ footer {
 
 .project {
   margin-bottom: 10px;
-  border-bottom-style: groove;
+  border-bottom: grey 1px solid;
 }
 .project  h2 {
   margin-bottom: 10px;
@@ -200,7 +200,7 @@ footer {
 }
 
 .project p {
-  margin-left: 5px;
+  text-align: center;
 }
 
 .project img {
