@@ -34,12 +34,12 @@ will allow access to any json file in the data folder.
 The next step is to read the data from the file. To do this, we need to get the
 URL of the file and make a request to it.
 
-To get the URL of the file we can use `chrome.runtime.getUrl('path/to/file')`.
+To get the URL of the file we can use `chrome.runtime.getURL('path/to/file')`.
 
 Then we make a GET request to the URL. In this example, we will use the ES6 feature [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) but methods such as XmlHttpRequest will also work.
 
 ```javascript
-const url = chrome.runtime.getUrl('path/to/file');
+const url = chrome.runtime.getURL('path/to/file');
 
 fetch(url)
     .then((response) => {response.json()}) //assuming file contains json
@@ -51,5 +51,5 @@ And there we have it!
 To reiterate the steps simply:
 
 1. Add file path to the `web_accessible_resources` property in the `manifest.json` file
-2. Get the URL of the file using `chrome.runtime.getUrl('path/to/file')`
+2. Get the URL of the file using `chrome.runtime.getURL('path/to/file')`
 3. Make a GET request to the URL
