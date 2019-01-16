@@ -92,3 +92,6 @@ The idea of creating a client, creating requests and receiving responses is
 quite a bit more intuitive than using `URlConnection`! `HttpClient` also supports
 asynchronous requests, HTTP/2 and websockets. It's an enticing reason to migrate
 from 8 to 11!
+
+*Code used in this article can be found
+[here](https://github.com/AussieGuy0/trash-heap/blob/master/code/java/http/src/main/java/au/com/anthonybruno/http/Main.java)*
