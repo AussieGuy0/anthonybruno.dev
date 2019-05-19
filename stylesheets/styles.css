@@ -1,6 +1,7 @@
 body {
    font-family: 'Helvetica', 'Avenir', 'Arial', sans-serif;
    margin: 0;
+   font-size: 16px;
 }
 
 p, ul, ol, table, pre, dl {
@@ -30,11 +31,14 @@ pre {
     overflow-x: auto;
 }
 
+pre.highlight {
+   font-size: 14px; 
+}
+
 .wrapper {
    margin: 0px auto; 
    max-width: 700px;
 }
-
 
 .nav-bar {
     display: flex;
@@ -79,12 +83,10 @@ footer {
     justify-content: center;
     padding-top: 5px;
     font-size: 32px;    
-    background: #EEEEEE;
+    border-top: #cfcfcf 1px solid;
 }
 
 .social-media-icons {
-    display: flex;
-    justify-content: space-between;
 }
 
 .text-muted {
