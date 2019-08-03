@@ -6,7 +6,6 @@
     <title> {{ page.title }} </title>
     <link rel="stylesheet" href="{{ site.url }}/stylesheets/styles.css">
     <link rel="stylesheet" href="{{ site.url }}/stylesheets/syntax.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="robots" content="index,follow">
     <link type="image/x-icon" rel="icon" href="{{ site.url }}/favicon.ico">
@@ -14,7 +13,12 @@
   <body>
       <div class="wrapper">
           <header class="nav-bar">
-             <h1 class="nav-bar__title">Anthony Bruno</h1>
+             <div class="nav-bar__brand">
+                 <a href="/">
+                    <img src="/favicon.ico"/> 
+                 </a>
+                 <h1 class="nav-bar__title">Anthony Bruno</h1>
+             </div>
              <div class="nav-bar__links">
                  <a href="{{ site.url }}">Home</a> ·
                  <a href="{{ site.url }}/aboutme">About Me</a> ·
@@ -27,11 +31,11 @@
       </div>
      <footer>
         <div class="social-media-icons">
-            <a href="https://github.com/AussieGuy0"><i class="fab fa-github" aria-hidden="true"></i></a> 
-            <a href="https://dev.to/aussieguy"><i class="fab fa-dev" aria-hidden="true"></i></a> 
-            <a href="https://twitter.com/AnthonyBrunoAUS"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-            <a href="https://au.linkedin.com/in/anthonybruno1996"><i class="fab fa-linkedin" aria-hidden="true"></i></a> 
-            <a href="mailto:hello@anthonybruno.dev"><i class="fas fa-envelope" aria-hidden="true"></i></a> 
+            <a href="https://twitter.com/AnthonyBrunoAUS">Twitter</a>
+            <a href="https://github.com/AussieGuy0">Github</a> 
+            <a href="https://dev.to/aussieguy">Dev.to</a> 
+            <a href="https://au.linkedin.com/in/anthonybruno1996">LinkedIn</a> 
+            <a href="mailto:hello@anthonybruno.dev">Email</a> 
         </div>
       </footer>
   </body>
