@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
    font-family: 'Helvetica', 'Avenir', 'Arial', sans-serif;
    margin: 0;
