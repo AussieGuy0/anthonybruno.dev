@@ -2,6 +2,7 @@
 layout: post
 title: Three Ways To Add an ActionListener In Java
 published: true
+tags: Java Swing Guide
 ---
 
 When building GUI's, the interface needs a way to listen and respond to events. Events are triggered when the user interacts with the GUI, such as pressing buttons and inserting text.

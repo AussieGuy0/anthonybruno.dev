@@ -2,6 +2,7 @@
 layout: post
 title: Reading files in a Chrome Extension
 published: true
+tags: Javascript Guide Chrome
 ---
 Often, it is desirable for a Chrome extension to be bundled with files that
 need to be read. These files may contain data or configuration information to help

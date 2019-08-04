@@ -2,6 +2,7 @@
 layout: post
 title: Generating CSV files with SDGen and Faker
 published: true
+tags: Java Project Guide
 ---
 The CSV format is a simple but commonly used format for exchanging
 data. Many applications support the import and export of information as CSV

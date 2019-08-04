@@ -2,6 +2,7 @@
 layout: post
 title: A quick look at Java 11's HttpClient
 published: true 
+tags: Java
 ---
 Java 11 was released in September 2018 and is the first Long-Term-Support version 
 after Java 8. One of its features is [HttpClient](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/HttpClient.html), 

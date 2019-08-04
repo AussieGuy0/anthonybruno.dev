@@ -134,6 +134,7 @@ footer {
 .social-media-icons {
     max-width: 720px;
     margin: 0px auto; 
+    padding-left: 10px;
 }
 
 .social-media-icons a {
@@ -142,5 +143,17 @@ footer {
 
 .text-muted {
     color: grey;
+}
+
+.tag {
+   background: #eee;
+   color: #535353;
+   padding: 3px 5px;
+}
+
+@media only screen and (max-width: 420px) {
+  .nav-bar__title {
+    display: none;
+  }
 }
 

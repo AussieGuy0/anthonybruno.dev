@@ -1,6 +1,7 @@
 ---
 layout: post
 title: An update on what I have been working on
+tags: Javascript Learning
 ---
 Long time no post! I thought I would give an update on how I'm spending my (rapidly decreasing) holidays. 
 

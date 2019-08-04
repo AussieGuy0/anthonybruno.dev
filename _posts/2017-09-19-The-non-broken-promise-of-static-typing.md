@@ -2,6 +2,7 @@
 layout: post
 title: The non-broken promise of static typing
 published: true
+tags: Thoughts
 ---
 A while back I read an article about how static typing does not prevent
 bugs being added to software. The article is appropriately named: [The broken promise of static

@@ -2,6 +2,7 @@
 layout: post
 title: A Look Back at 2016 and Plans For 2017
 excerpt: 2016 was a huge year for me. I finished my Bachelor of Computer Science (although my graduation ceremony isn't until April), got a job, wrote a few blog posts, and made my first contribution to open source.
+tags: Reflection
 ---
 
 ## 2016 Retrospective

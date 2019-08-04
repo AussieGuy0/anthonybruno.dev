@@ -2,6 +2,7 @@
 layout: post
 title: What Tools I Use
 excerpt: In this post, I wanted to share what tools I use regularly. I believe that every developer should have a small 'go-to' selection of tools on their tool belt.
+tags: Tools Software
 ---
 ![toolImage](http://d2rpukhlpcbfio.cloudfront.net/img/brand-wiha-1.jpg)
 

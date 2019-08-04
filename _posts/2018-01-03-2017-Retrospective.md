@@ -2,6 +2,7 @@
 layout: post
 title: 2017 Retrospective
 published: true
+tags: Reflection
 ---
 ![302 contributions](/media/github_contributions.png)
 

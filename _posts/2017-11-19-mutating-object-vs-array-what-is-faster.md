@@ -2,6 +2,7 @@
 layout: post
 title: Mutating an object vs a single element array in Java, which is faster?
 published: true
+tags: Java
 ---
 Recently a coworker asked what he should do to pass an `int` into a method,
 change it, and then get the changed variable after the method ends. Apparently simply returning it was not an option! I suggested wrapping 
