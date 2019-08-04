@@ -48,6 +48,11 @@ pre.highlight {
    font-size: 14px; 
 }
 
+:not(pre) > code {
+    background: #f0f0f0;
+    padding: 1px 3px;
+}
+
 .wrapper {
    margin: 0px auto; 
    max-width: 740px;
@@ -110,6 +115,17 @@ pre.highlight {
     margin-bottom: 20px;
 }
 
+.aboutme__img-container {
+    display: flex;
+    justify-content: center;
+    background: #fbfbfb;
+    border-radius: 6px;
+}
+
+.aboutme__img-container img {
+    max-width: 400px;
+}
+
 footer {
     padding-top: 5px;
     border-top: #cfcfcf 1px solid;
@@ -128,8 +144,3 @@ footer {
     color: grey;
 }
 
-
-:not(pre) > code {
-    background: #f0f0f0;
-    padding: 1px 3px;
-}
