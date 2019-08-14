@@ -10,7 +10,7 @@ a new way to make HTTP requests. This post will give a quick overview of  HttpCl
 for [URLConnection](https://docs.oracle.com/javase/8/docs/api/java/net/URLConnection.html)!
 
 ## The task
-I've created a page on my website [http://anthonybruno.com.au/last-update ](http://anthonybruno.com.au/last-update)  that
+I've created a page on my website [http://anthonybruno.dev/last-update](http://anthonybruno.dev/last-update)  that
 simply has a Unix timestamp of the last time the site was built.
 
 The task is simple, create some code that requests this page and returns the

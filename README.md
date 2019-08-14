@@ -1,2 +1,3 @@
-# AussieGuy0.github.io
-Personal website hosted at anthonybruno.com.au
+# anthonybruno.dev
+Personal website hosted at anthonybruno.dev. Uses 
+[Jekyll](https://jekyllrb.com).
