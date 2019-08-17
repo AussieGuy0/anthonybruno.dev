@@ -1,5 +1,18 @@
 title: Anthony Bruno
 description: "Anthony Bruno: Programmer, Soccer Fanatic, Australian"
 url: https://anthonybruno.dev
-author: AnthonyBrunoAUS
 highlighter: rouge
+author: AnthonyBrunoAUS
+twitter:
+  username: AnthonyBrunoAUS
+  card: summary
+social:
+  name: Anthony Bruno
+  links:
+    - https://twitter.com/AnthonyBrunoAUS
+    - https://github.com/AussieGuy0
+    - https://dev.to/aussieguy
+    - https://au.linkedin.com/in/anthonybruno1996
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
