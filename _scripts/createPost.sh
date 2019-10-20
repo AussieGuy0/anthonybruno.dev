@@ -19,5 +19,4 @@ fi
 cd "$CURR_DIR"
 cp post.txt "$POSTPATH"
 sed -i -e "s/{title}/$TITLE/g" "$POSTPATH"
-mkdir "../_includes/$CLEANED_TITLE"
 vim "$POSTPATH"
