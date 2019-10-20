@@ -16,7 +16,7 @@ we'll link it up to a Dev.to blog.
 
 # Adding RSS To GitHub Pages
 Adding RSS support to a GitHub Pages is very simple. All we have to do is add
-the following line the `_config.yml` file in the root directory of the project.
+the following line to the `_config.yml` file in the root directory of the project.
 
 ```yaml
 plugins:
@@ -25,7 +25,8 @@ plugins:
 
 To test locally, we can add the following entry to the project's
 `Gemfile`. (If you haven't yet set up a local environment for your GitHub pages
-site, please follow [this guide.](https://help.github.com/en/articles/testing-your-github-pages-site-locally-with-jekyll)
+site, please follow [this
+guide.](https://help.github.com/en/articles/testing-your-github-pages-site-locally-with-jekyll))
 
 ```ruby
 gem 'jekyll-feed'
@@ -69,13 +70,14 @@ initially come in as drafts and posts can be published individually.
 
 ## Possible Improvements
 
-While the RSS integration is works really well, there a couple of small issues I
+While the RSS integration works really well, there's a couple of small issues I
 encountered.
 
 When I initially set up RSS on the Dev.to side, it said it fetched my feed but I didn't 
 see any entries in my dashboard. It wasn't until I checked a bit later that posts were 
 sent across from my blog. I certainly don't have a problem with waiting, 
-but I thought I did something wrong as there was no clear messaging that it take a little while.
+but I thought I did something wrong as there was no clear messaging that it
+takes a little while.
 
 Another thing is that I have some entries from my blog that I don't want to publish on Dev.to.
 However, if I delete the entries from my dashboard, they just come right back.
@@ -85,7 +87,7 @@ It'd be good if there was some way to 'ignore' a blog post from an RSS feed.
 # Conclusion
 
 To reiterate the steps:
-1. Add the `- jekyll-feed` to the plugin section in `_config.yml`
+1. Add the `- jekyll-feed` to the plugins section in `_config.yml`
 2. Go to https://dev.to/settings/publishing-from-rss
 3. Enter https://yoursite/feed.xml as the RSS Feed URL
 4. Press update.
