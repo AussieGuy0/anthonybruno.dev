@@ -25,7 +25,8 @@ plugins:
 
 To test locally, we can add the following entry to the project's
 `Gemfile`. (If you haven't yet set up a local environment for your GitHub pages
-site, please follow [this guide.](https://help.github.com/en/articles/testing-your-github-pages-site-locally-with-jekyll)
+site, please follow [this
+guide.](https://help.github.com/en/articles/testing-your-github-pages-site-locally-with-jekyll))
 
 ```ruby
 gem 'jekyll-feed'
@@ -85,7 +86,7 @@ It'd be good if there was some way to 'ignore' a blog post from an RSS feed.
 # Conclusion
 
 To reiterate the steps:
-1. Add the `- jekyll-feed` to the plugin section in `_config.yml`
+1. Add the `- jekyll-feed` to the plugins section in `_config.yml`
 2. Go to https://dev.to/settings/publishing-from-rss
 3. Enter https://yoursite/feed.xml as the RSS Feed URL
 4. Press update.
