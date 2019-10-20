@@ -16,7 +16,7 @@ we'll link it up to a Dev.to blog.
 
 # Adding RSS To GitHub Pages
 Adding RSS support to a GitHub Pages is very simple. All we have to do is add
-the following line the `_config.yml` file in the root directory of the project.
+the following line to the `_config.yml` file in the root directory of the project.
 
 ```yaml
 plugins:
