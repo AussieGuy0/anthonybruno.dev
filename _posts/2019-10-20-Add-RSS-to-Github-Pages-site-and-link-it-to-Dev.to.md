@@ -69,7 +69,7 @@ initially come in as drafts and posts can be published individually.
 
 ## Possible Improvements
 
-While the RSS integration is works really well, there a couple of small issues I
+While the RSS integration works really well, there a couple of small issues I
 encountered.
 
 When I initially set up RSS on the Dev.to side, it said it fetched my feed but I didn't 
