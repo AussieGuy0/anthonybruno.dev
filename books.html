@@ -1,0 +1,17 @@
+---
+layout: master
+title: Read Books
+---
+<h1>Books</h1>
+<p>Here's a list of books that I have read and logged on <a href="https://www.goodreads.com">Goodreads</a>.  Check out my <a href="https://www.goodreads.com/user/show/51361759">profile</a> to see what I'm currently reading. </p>
+{% assign sorted_books = site.read_books | sort: 'date' | reverse %}
+{% for book in sorted_books %}
+<ul>
+    <li>
+        <span class="text-muted">{{ book.date | date_to_string }}</span> <strong>{{ book.title }}</strong>  ({{ book.rating }}/5)
+        {% if book.has_content %}
+        <a href="{{book.url}}">Review</a>
+        {% endif %}
+    </li>
+</ul>
+{% endfor %}

@@ -128,6 +128,7 @@ pre.highlight {
     justify-content: center;
     background: #fbfbfb;
     border-radius: 6px;
+    margin-bottom: 10px;
 }
 
 .aboutme__img-container img {
@@ -159,6 +160,13 @@ footer {
    padding: 3px 5px;
 }
 
+.main-page-section {
+    padding: 10px;
+    background: #f2ffda;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+    
 @media only screen and (max-width: 420px) {
   .nav-bar__title {
     display: none;

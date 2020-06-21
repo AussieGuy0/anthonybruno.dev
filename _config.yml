@@ -17,3 +17,8 @@ social:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+exclude:
+  - vendor
+collections:
+  read_books:
+    output: true

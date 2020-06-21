@@ -2,6 +2,11 @@
 layout: master
 title: Home
 ---
+<section class="main-page-section"> 
+    <h1>Hey there!</h1>
+    <p>I'm Anthony Bruno, a software engineer from Australia. This is my website where I document my journey in the wonderful field of programming. Learn more <a href="/aboutme">about me</a>, see <a href="/projects"> my projects</a>, view the <a href="/books">books I've read</a> or simply scroll down to see some things I've written.</p>
+</section>
+
 <h1 class="page-title"> Articles </h1>
 {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 {% for year in postsByYear %}

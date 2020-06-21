@@ -1,0 +1,8 @@
+---
+rating: 2
+title: "The Great Gatsby"
+link: https://www.goodreads.com/book/show/18401910-the-great-gatsby
+has_content: true
+layout: book
+---
+I had high exceptions before starting to read this book. It's often regarded as a classic and was the basis of a Hollywood blockbuster. Unfortunately, these expectations were not met and I found the book lacking.<br /><br />The book takes place in a wealthy town. It's population seemingly consisting entirely of shallow socialites, who's only purpose in life is to attend parties and cheat on their partners. The story revolves around Jay Gatsby (a.k.a The Great Gatsby), his parties, and his vaguely interesting mysterious past.<br /><br />I found the characters in the book both unlikable and underdeveloped. I'm not even lying when I say that every person in the book is either having an affair, or mentions that they were. The main viewpoint character, Nick, is completely devoid of anything interesting. The only purpose he seems to have is to watch events happen around him. These reasons caused me to not have any sympathy to anyone during the more dramatic parts of the story. If you're looking for good character progression, there isn't any here!<br /><br />I found the writing itself to be average and subpar at points. The author has a habit of making sentences a lot more pretentious than they need to be. There was also a number of places where the story jumped to the past, or to another place, but it was done in a very jarringly fashion. <br /><br />This is definitely a case of a book where I really don't understand how it became a classic!
