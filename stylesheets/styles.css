@@ -166,6 +166,10 @@ footer {
     border-radius: 5px;
     margin-bottom: 5px;
 }
+
+.projects__projects-list li {
+    margin-bottom: 5px;
+}
     
 @media only screen and (max-width: 420px) {
   .nav-bar__title {
