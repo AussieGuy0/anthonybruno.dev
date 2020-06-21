@@ -2,13 +2,13 @@ package main
 
 import (
 	"encoding/xml"
+	"errors"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"net/url"
 	"strconv"
-    "errors"
-    "time"
-    "log"
+	"time"
 )
 
 var goodReadsUrl = "https://www.goodreads.com"
@@ -28,7 +28,7 @@ type Review struct {
 	Book    *Book    `xml:"book"`
 	Rating  int      `xml:"rating"`
 	ReadAt  string   `xml:"read_at"`
-	Body string   `xml:"body"`
+	Body    string   `xml:"body"`
 }
 
 type Book struct {
@@ -50,7 +50,7 @@ func GetReviews(userId int, key string) ([]Review, error) {
 }
 
 func (review Review) ReadAtTime() (time.Time, error) {
-   return time.Parse(time.RubyDate, review.ReadAt)
+	return time.Parse(time.RubyDate, review.ReadAt)
 }
 
 func makeReadBooksRequest(userId int, key string) (*http.Response, error) {
@@ -62,17 +62,17 @@ func makeReadBooksRequest(userId int, key string) (*http.Response, error) {
 	q.Add("key", key)
 	q.Add("shelf", "read")
 	q.Add("v", "2")
-    q.Add("per_page", "200") //TODO: Good enough for now, will need multiple requests in future
+	q.Add("per_page", "200") //TODO: Good enough for now, will need multiple requests in future
 	url.RawQuery = q.Encode()
 
-    log.Println("Getting read books from Goodreads")
+	log.Println("Getting read books from Goodreads")
 	res, err := http.Get(url.String())
 	if err != nil {
 		return nil, err
 	}
-    if res.StatusCode != 200 {
-        return nil, errors.New("Non 200 status code: " + strconv.Itoa(res.StatusCode)) 
-    }
+	if res.StatusCode != 200 {
+		return nil, errors.New("Non 200 status code: " + strconv.Itoa(res.StatusCode))
+	}
 	return res, nil
 }
 
@@ -87,5 +87,5 @@ func parseReadBooks(res *http.Response) (*ReadBooks, error) {
 	if err != nil {
 		return nil, err
 	}
-    return &parsed, nil
+	return &parsed, nil
 }
