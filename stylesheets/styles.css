@@ -9,7 +9,7 @@ html {
 body {
    font-family: 'Helvetica', 'Avenir', 'Arial', sans-serif;
    margin: 0;
-   font-size: 16px;
+   font-size: 19px;
 }
 
 main {
@@ -43,9 +43,11 @@ a:hover {
     cursor: pointer;
 }
 
-.highlight {
+figure.highlight {
     border-radius: 5px;
+    font-size: 14px;
 }
+
 
 pre {
     padding: 8px 15px;
@@ -53,7 +55,7 @@ pre {
 }
 
 pre.highlight {
-   font-size: 14px; 
+    font-size: 14px;
 }
 
 :not(pre) > code {
@@ -170,7 +172,7 @@ footer {
 .projects__projects-list li {
     margin-bottom: 5px;
 }
-    
+
 @media only screen and (max-width: 420px) {
   .nav-bar__title {
     display: none;
