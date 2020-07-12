@@ -14,7 +14,7 @@ html {
 body {
    font-family: 'Helvetica', 'Avenir', 'Arial', sans-serif;
    margin: 0;
-   font-size: var(--mobile-font-size)
+   font-size: var(--default-font-size)
 }
 
 main {
