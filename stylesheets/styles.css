@@ -1,3 +1,8 @@
+:root {
+    --default-font-size: 19px;
+    --mobile-font-size: 16px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,7 +14,7 @@ html {
 body {
    font-family: 'Helvetica', 'Avenir', 'Arial', sans-serif;
    margin: 0;
-   font-size: 19px;
+   font-size: var(--mobile-font-size)
 }
 
 main {
@@ -173,6 +178,29 @@ footer {
     margin-bottom: 5px;
 }
 
+.books__list {
+    font-size: var(--mobile-font-size);
+    font-family: monospace;
+    padding-left: 10px;
+}
+
+.books__list li {
+    display: flex;
+}
+
+.books__list .books__date {
+    width: 20%;
+}
+
+.books__list .books__title {
+    font-weight: bold;
+    width: 60%;
+}
+
+.books__list .books__rating {
+    width: 20%;
+}
+
 @media only screen and (max-width: 420px) {
   .nav-bar__title {
     display: none;
@@ -181,6 +209,6 @@ footer {
 
 @media only screen and (max-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: var(--mobile-font-size);
   }
 }
