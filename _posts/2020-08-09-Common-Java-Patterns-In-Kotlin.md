@@ -4,7 +4,7 @@ title: Common Java patterns in Kotlin
 tags: Java Kotlin
 ---
 
-![Java logo with an arrow pointng to the Kotlin logo](/media/kotlin-to-java.png)
+![Java logo with an arrow pointing to the Kotlin logo](/media/kotlin-to-java.png)
 
 Recently, I've been using Kotlin for a project at work. As someone coming from a 
 Java background, I've been taking notes on certain patterns that are used in
