@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Common Java techniques in Kotlin
+title: Common Java patterns in Kotlin
 tags: Java Kotlin
 ---
 
