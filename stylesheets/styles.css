@@ -48,19 +48,19 @@ a:hover {
     cursor: pointer;
 }
 
+div.highlighter-rouge div.highlight pre {
+    border-radius: 5px;
+    font-size: 14px;
+}
+
 figure.highlight {
     border-radius: 5px;
     font-size: 14px;
 }
 
-
 pre {
     padding: 8px 15px;
     overflow-x: auto;
-}
-
-pre.highlight {
-    font-size: 14px;
 }
 
 :not(pre) > code {
@@ -124,6 +124,17 @@ pre.highlight {
 
 .post .post__body {
 
+}
+
+.post .post__cta {
+    padding: 20px 10px 20px 10px;
+    background: #f2ffda;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.post h2 {
+    margin-top: 30px;    
 }
 
 .page-title {

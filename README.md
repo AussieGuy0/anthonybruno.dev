@@ -10,5 +10,10 @@ Personal website hosted at anthonybruno.dev. Uses
 - Goodreads API key (https://www.goodreads.com/api)
 
 ### Commands
-`GOODREADS_KEY="<GOODREADS_API_KEY>" ./_build.sh`
+
+## Build and serve site
+`make serve`
+
+## Run everything
+`GOODREADS_KEY="<GOODREADS_API_KEY>" make all`
 

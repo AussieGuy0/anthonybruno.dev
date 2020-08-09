@@ -19,6 +19,7 @@ plugins:
   - jekyll-feed
 exclude:
   - vendor
+  - Makefile
 collections:
   read_books:
     output: true
