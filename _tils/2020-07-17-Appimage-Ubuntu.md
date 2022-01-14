@@ -1,11 +1,11 @@
 ---
-title: AppImages and Ubuntu
+title: AppImage's in Ubuntu
 layout: post
 tags: linux
 ---
 `AppImage`s are basically self contained scripts that can be run without installation.
 
-We first need to make it executable via `chmod +x name.AppImage`.
+We first need to make it executable via `chmod +x name.AppImage`. 
 
 Then we can run it via `./name.AppImage`.
 
@@ -25,5 +25,3 @@ Type=Application
 Categories=Development
 ```
 4. Done!
-
-
