@@ -1,0 +1,15 @@
+---
+layout: master
+title: TIL
+---
+<h1>TIL (Today I Learned)</h1>
+<p>Inspired by <a href="https://github.com/jbranchaud/til">Josh Branchaud's amazing TIL repo!</a>. This is a page to host tidbits of my learning, which don't deserve a full article.</p>
+<p>There are currently {{  site.tils.size }} TILs.
+{% assign sorted = site.tils | sort: 'date' | reverse %}
+{% for til in sorted %}
+<ul>
+    <li>
+        <a href="{{til.url}}">{{ til.date | date_to_string }} | {{ til.title }}</a>
+    </li>
+</ul>
+{% endfor %}
