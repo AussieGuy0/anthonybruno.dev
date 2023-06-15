@@ -3,3 +3,4 @@ gem 'github-pages', group: :jekyll_plugins
 gem 'jekyll-seo-tag'
 gem 'rouge'
 gem 'jekyll-feed'
+gem 'webrick'
