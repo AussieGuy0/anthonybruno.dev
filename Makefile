@@ -1,4 +1,4 @@
-jekyll_version=3.8
+jekyll_version=4.0
 
 all: fetch_til serve
 
