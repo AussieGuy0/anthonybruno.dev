@@ -1,7 +1,6 @@
 title: Anthony Bruno
 description: "Anthony Bruno - Software Engineer"
 url: https://anthonybruno.dev
-highlighter: rouge
 author: DownUnder_Dev
 repository: AussieGuy0/AussieGuy0.github.io
 twitter:
@@ -17,9 +16,11 @@ social:
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+highlighter: rouge
 exclude:
-  - vendor
+  - CNAME
   - Makefile
+  - vendor
 collections:
   read_books:
     output: true
