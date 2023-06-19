@@ -4,11 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title> {{ page.title }} </title>
-    <link rel="stylesheet" href="{{ site.url }}/stylesheets/styles.css">
     <link rel="stylesheet" href="{{ site.url }}/stylesheets/syntax.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="robots" content="index,follow">
     <link type="image/x-icon" rel="icon" href="{{ site.url }}/favicon.ico">
+    <style>
+        html {
+            display: none;
+        }
+    </style>
     {% seo %}
   </head>
   <body>
@@ -42,5 +46,6 @@
       </footer>
       <script data-goatcounter="https://anthonybruno.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+      <link rel="stylesheet" href="{{ site.url }}/stylesheets/styles.css">
   </body>
 </html>
