@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating a classic GitHub Pages site to GitHub actions
+title: Migrating a classic Jekyll GitHub Pages site to GitHub actions
 tags: Github Guide
 ---
 
