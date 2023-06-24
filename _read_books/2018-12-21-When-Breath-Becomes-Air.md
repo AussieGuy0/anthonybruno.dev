@@ -1,7 +1,7 @@
 ---
 rating: 3
 title: "When Breath Becomes Air"
-link: https://www.goodreads.com/book/show/28670512-when-breath-becomes-air
+link: https://www.goodreads.com/review/show/1725200987?utm_medium=api&utm_source=rss
 has_content: false
 layout: book
 ---

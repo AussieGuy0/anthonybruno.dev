@@ -13,56 +13,53 @@ import (
 
 var goodReadsUrl = "https://www.goodreads.com"
 
-type ReadBooks struct {
-	XMLName xml.Name `xml:"GoodreadsResponse"`
-	Reviews *Reviews `xml:"reviews"`
+type Rss struct {
+	XMLName xml.Name `xml:"rss"`
+	Channel *Channel `xml:"channel"`
 }
 
-type Reviews struct {
-	XMLName    xml.Name `xml:"reviews"`
-	ReviewList []Review `xml:"review"`
+type Channel struct {
+	XMLName   xml.Name   `xml:"channel"`
+	ReadBooks []ReadBook `xml:"item"`
 }
 
-type Review struct {
-	XMLName xml.Name `xml:"review"`
-	Book    *Book    `xml:"book"`
-	Rating  int      `xml:"rating"`
-	ReadAt  string   `xml:"read_at"`
-	Body    string   `xml:"body"`
-}
-
-type Book struct {
-	XMLName xml.Name `xml:"book"`
-	Title   string   `xml:"title_without_series"`
+type ReadBook struct {
+	XMLName xml.Name `xml:"item"`
+	Title   string   `xml:"title"`
 	Link    string   `xml:"link"`
+	Added   string   `xml:"user_date_added"`
+	ReadAt  string   `xml:"user_read_at"`
+	Review  string   `xml:"user_review"`
+	Rating  int      `xml:"user_rating"`
 }
 
-func GetReviews(userId int, key string) ([]Review, error) {
-	res, err := makeReadBooksRequest(userId, key)
+func GetReadBooks(userId int) ([]ReadBook, error) {
+	res, err := makeReadBooksRequest(userId)
 	if err != nil {
 		return nil, err
 	}
-	readBooks, err := parseReadBooks(res)
+	rss, err := parseRss(res)
 	if err != nil {
 		return nil, err
 	}
-	return readBooks.Reviews.ReviewList, nil
+	return rss.Channel.ReadBooks, nil
 }
 
-func (review Review) ReadAtTime() (time.Time, error) {
-	return time.Parse(time.RubyDate, review.ReadAt)
+func (readBook ReadBook) ReadAtTime() (time.Time, error) {
+	if len(readBook.ReadAt) != 0 {
+		return time.Parse(time.RFC1123Z, readBook.ReadAt)
+	}
+	// Fallback to added date if no ReadAt date.
+	return time.Parse(time.RFC1123Z, readBook.Added)
 }
 
-func makeReadBooksRequest(userId int, key string) (*http.Response, error) {
-	url, err := url.Parse(goodReadsUrl + "/review/list/" + strconv.Itoa(userId) + ".xml")
+func makeReadBooksRequest(userId int) (*http.Response, error) {
+	url, err := url.Parse(goodReadsUrl + "/review/list_rss/" + strconv.Itoa(userId))
 	if err != nil {
 		return nil, err
 	}
 	q := url.Query()
-	q.Add("key", key)
 	q.Add("shelf", "read")
-	q.Add("v", "2")
-	q.Add("per_page", "200") //TODO: Good enough for now, will need multiple requests in future
 	url.RawQuery = q.Encode()
 
 	log.Println("Getting read books from Goodreads")
@@ -76,13 +73,13 @@ func makeReadBooksRequest(userId int, key string) (*http.Response, error) {
 	return res, nil
 }
 
-func parseReadBooks(res *http.Response) (*ReadBooks, error) {
+func parseRss(res *http.Response) (*Rss, error) {
 	defer res.Body.Close()
 	body, err := ioutil.ReadAll(res.Body)
 	if err != nil {
 		return nil, err
 	}
-	var parsed ReadBooks
+	var parsed Rss
 	err = xml.Unmarshal(body, &parsed)
 	if err != nil {
 		return nil, err

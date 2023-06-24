@@ -11,7 +11,7 @@ const (
 	dateFormat = "2006-01-02"
 )
 
-func WriteReviews(reviews []Review, writeFolder string) error {
+func WriteReviews(reviews []ReadBook, writeFolder string) error {
 	for _, review := range reviews {
 		if shouldSkipReview(&review) {
 			continue
@@ -24,19 +24,19 @@ func WriteReviews(reviews []Review, writeFolder string) error {
 	return nil
 }
 
-func shouldSkipReview(review *Review) bool {
+func shouldSkipReview(readBook *ReadBook) bool {
 	// If readAt is an empty string, the books was not read and we can safely skip it
-	if len(review.ReadAt) == 0 {
-		log.Println("Skipping " + review.Book.Title + " as it has not readAt date")
+	if len(readBook.ReadAt) == 0 && len(readBook.Added) == 0 {
+		log.Println("Skipping " + readBook.Title + " as it has no readAt date")
 		return true
 	}
 
 	return false
 }
 
-func writeReview(review *Review, path string) error {
-	str := generateReviewString(review)
-	filename, err := generateFilename(review)
+func writeReview(readBook *ReadBook, path string) error {
+	str := generateReviewString(readBook)
+	filename, err := generateFilename(readBook)
 	if err != nil {
 		return err
 	}
@@ -50,22 +50,23 @@ func writeReview(review *Review, path string) error {
 	return nil
 }
 
-func generateFilename(review *Review) (string, error) {
-	readAt, err := review.ReadAtTime()
+func generateFilename(readBook *ReadBook) (string, error) {
+	readAt, err := readBook.ReadAtTime()
 	if err != nil {
 		return "", err
 	}
-	title := strings.ReplaceAll(review.Book.Title, " ", "-")
+	title := strings.ReplaceAll(readBook.Title, " ", "-")
+	title = strings.ReplaceAll(title, "/", "-")
 	return readAt.Format(dateFormat) + "-" + title + ".md", nil
 }
 
-func generateReviewString(review *Review) string {
+func generateReviewString(readBook *ReadBook) string {
 	var sb strings.Builder
-	content := strings.TrimSpace(review.Body)
+	content := strings.TrimSpace(readBook.Review)
 	sb.WriteString("---\n")
-	writeKey(&sb, "rating", strconv.Itoa(review.Rating))
-	writeKey(&sb, "title", "\""+review.Book.Title+"\"")
-	writeKey(&sb, "link", review.Book.Link)
+	writeKey(&sb, "rating", strconv.Itoa(readBook.Rating))
+	writeKey(&sb, "title", "\""+readBook.Title+"\"")
+	writeKey(&sb, "link", readBook.Link)
 	writeKey(&sb, "has_content", strconv.FormatBool(len(content) > 0))
 	writeKey(&sb, "layout", "book")
 	sb.WriteString("---\n")
