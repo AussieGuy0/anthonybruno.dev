@@ -1,7 +1,7 @@
 ---
 rating: 2
 title: "The Great Gatsby"
-link: https://www.goodreads.com/book/show/18401910-the-great-gatsby
+link: https://www.goodreads.com/review/show/2765050791?utm_medium=api&utm_source=rss
 has_content: true
 layout: book
 ---

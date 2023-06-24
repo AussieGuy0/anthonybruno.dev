@@ -1,7 +1,7 @@
 ---
-rating: 3
+rating: 2
 title: "We Need to Talk About Kevin"
-link: https://www.goodreads.com/book/show/46143207-we-need-to-talk-about-kevin
+link: https://www.goodreads.com/review/show/2893775193?utm_medium=api&utm_source=rss
 has_content: true
 layout: book
 ---

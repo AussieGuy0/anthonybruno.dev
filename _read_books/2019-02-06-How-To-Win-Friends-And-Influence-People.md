@@ -1,7 +1,7 @@
 ---
-rating: 3
+rating: 2
 title: "How To Win Friends And Influence People"
-link: https://www.goodreads.com/book/show/35620953-how-to-win-friends-and-influence-people
+link: https://www.goodreads.com/review/show/2019185400?utm_medium=api&utm_source=rss
 has_content: true
 layout: book
 ---

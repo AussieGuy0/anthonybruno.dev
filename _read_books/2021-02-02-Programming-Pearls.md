@@ -1,0 +1,8 @@
+---
+rating: 3
+title: "Programming Pearls"
+link: https://www.goodreads.com/review/show/2019184767?utm_medium=api&utm_source=rss
+has_content: true
+layout: book
+---
+Programming Pearls is basically a collection of tips, tricks and solutions to interesting algorithmic problems. Each chapter, called 'columns' in the book, has a specific theme with a dive into a couple of challenges and how to solve them. Often, solutions are 'built up' over the course of the column, with a less efficient solution shown first, then with some adjustments, a more efficient technique is shown.<br /><br />There is a section of 'principles' at the end of each column. These are fantastic points that condensed key points that the author made throughout the chapter. I always looked forward to reading these.<br /><br />The usage of C throughout the examples made some of the code a bit hard to follow, as I have not used C since my uni days! However, code snippets are short and well explained. <br /><br />The book also provides heaps of problems for the reader to solve. I think this would've been great while I was studying, but I think it will be useful to refer back to when refreshing myself on Computer Science principles.<br /><br />Overall, a very solid book for algorithmic thinking and programming. Due to the fact that it lacked a bit of take away knowledge for modern software development, I will only rate it 3 stars.

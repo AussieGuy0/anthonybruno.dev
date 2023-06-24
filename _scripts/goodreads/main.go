@@ -2,15 +2,10 @@ package main
 
 import (
 	"log"
-	"os"
 )
 
 func main() {
-	key := os.Getenv("GOODREADS_KEY")
-	if key == "" {
-		log.Fatal("Requries env property GOODREADS_KEY")
-	}
-	readBooks, err := GetReviews(51361759, key)
+	readBooks, err := GetReadBooks(51361759)
 	if err != nil {
 		log.Fatal(err)
 	}

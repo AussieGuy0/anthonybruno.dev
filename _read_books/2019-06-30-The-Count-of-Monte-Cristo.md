@@ -1,7 +1,7 @@
 ---
-rating: 4
+rating: 5
 title: "The Count of Monte Cristo"
-link: https://www.goodreads.com/book/show/8127528-the-count-of-monte-cristo
+link: https://www.goodreads.com/review/show/2621575497?utm_medium=api&utm_source=rss
 has_content: true
 layout: book
 ---
