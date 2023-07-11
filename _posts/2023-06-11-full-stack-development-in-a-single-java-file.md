@@ -4,9 +4,64 @@ title: "Full stack web development in a single Java file: An intro to Javalin an
 tags: Java Htmx
 ---
 
-TODO: Explain HTMX.
+![](/media/htmx-1/banner.png)
 
-Here's the list of dependencies that you can chuck in you `pom.xml` file.
+## Introduction
+
+In my programming career, I have used a wide variety of frontend frameworks.
+From JQuery and Angularjs (not Angular!).
+To Vue and React.
+
+A common theme with these was a SPA (Single Page Application) architecture.
+The server would respond with JSON, the frontend would parse it, do some javascript-y things, and
+ultimately render as html on the page.
+
+But this isn't cool anymore! There has been a trend towards moving rendering to the server,
+demonstrated by technologies like
+[Next.js](https://nextjs.org/) and [React Server
+Components](https://www.patterns.dev/posts/react-server-components).
+
+But did you know that a server can just respond with plain old HTML, without needing to refresh the whole
+page and not needing a complicated frontend framework to achieve this?
+
+Enter: [htmx](https://htmx.org/).
+
+htmx is a very basic frontend library, that operates based on special `hx-*` attributes on HTML elements.
+
+An example of this is the following (ripped straight off htmx's homepage):
+
+```html
+  <button hx-post="/clicked" hx-swap="outerHTML">
+    Click Me
+  </button>
+```
+
+This can be described as: "When this button is clicked, make a POST request to /clicked and replace
+the button with the HTML response".
+
+Basically, all of htmx revolves around:
+- Waiting for some sort of trigger (e.g. clicking a button, submitting a form, typing in a field)
+- Making a request to the server
+- Replacing an element on the page with the HTML response.
+
+This is a **simple, but powerful paradigm.**
+
+It simplifies frontend devlopment, making it easy to learn and maintain, without the need for
+complex frontend build tools.
+
+In the blog post, I will describe a Java web app stack using:
+
+- [j2html](https://j2html.com)
+- [Javalin](https://javalin.io/)
+- [htmx](https://htmx.org/)
+
+to enable fast and simple web app development.
+I will explain what each part of the stack does, and how we can put it all together to build a
+simple counter app in a single Java file!
+
+## Dependencies
+
+If you are using Maven, here's the list of dependencies that you can chuck in your `pom.xml` file.
 Don't worry, this blog post will explain what each of them does!
 
 ```xml
@@ -40,15 +95,9 @@ Don't worry, this blog post will explain what each of them does!
 ```
 
 ## Server side HTML with j2html
-In a typical architecture of a Single Page Application, the server only communicates in JSON.
-It is then up to frontend framework, like React, to consume that JSON and translate that to HTML.
-
-In HTMX, however we want the server to respond with HTML.
-HTMX will then simply replace the relevant element on the page with the server returned HTML.
-
 A way to generate HTML in Java is to use a templating engine like
 [Thymeleaf](https://www.thymeleaf.org/).
-However, these means the template files are outside Java, and as the blog title suggests, we want
+However, this means the template files are outside Java, and as the blog title suggests, we want
 everything in Java!
 
 A nice alternative to a templating engine is **j2html**.
@@ -220,7 +269,7 @@ This will make a bit more sense later on.
 
 ```java
   // Create a H2 tag with an id.
-  private H2Tag createCounter(int count) {
+  private H2Tag createCounterElement(int count) {
     return h2("count: " + count)
         .withId("counter");
   }
@@ -241,18 +290,34 @@ We can use this count and the `createCounter` method we created before in the ha
           ), (
               body(
                   h1("Hello world"),
-                  createCounter(count.get())
+                  createCounterElement(count.get())
               )
           )
       );
       var rendered = "<!DOCTYPE html>\n" + content.render();
       ctx.html(rendered);
     });
-
   }
 ```
 
-Lastly, and most importantly, we can use htmx by creating a button with specific attributes.
+We then need a way for the server to increment this counter.
+We can do this by defining a new handler on our server.
+
+Let's make it accept `POST` requests on the path `/increment`.
+It will increment the count on the server and return only the html for the counter element.
+This is where that `createCounterElement` method is useful!
+
+```java
+    javalin.post("/increment", ctx -> {
+      var newCounter = createCounterElement(count.incrementAndGet());
+      ctx.html(newCounter.render());
+    });
+```
+
+Lastly, and most importantly, we now use htmx to call this `increment` handler, and swap out the
+relevant counter element on the screen.
+
+To do so, we can define a button with special `hx-*` attributes like so:
 
 ```java
 button("Increment")
@@ -267,9 +332,10 @@ To explain each attribute:
 - [hx-swap](https://htmx.org/attributes/hx-swap/): Using `outerHTML` means htmx will swap the entire html of the counter element.
 
 
+Putting all the code we have together, we should have something that looks like the following:
 
 ```java
-  public static void main() {
+  public static void main(String[] args) {
     var javalin = Javalin.create(config -> {
           config.staticFiles.enableWebjars();
         }
@@ -300,8 +366,32 @@ To explain each attribute:
       ctx.html(newCounter.render());
     });
   }
+
+  private static H2Tag createCounterElement(int count) {
+    return h2("count: " + count)
+        .withId("counter");
+  }
 ```
 
+If we run the code, we should see something like the following:
 
+![](/media/htmx-1/counter-1.png)
 
+Now press 'increment' and see what happens!
 
+(Spoilers: the number should increment!)
+
+If we have the network tab open, we can see the request to `/increment`, with the html being
+returned.
+
+![](/media/htmx-1/counter-2.png)
+
+The counter will persist even if you refresh the page, as the number is stored on the server!
+
+## The End?
+I hope you have enjoyed learning a bit about Javalin, j2html and htmx!
+
+If you want to see see an example of a todo app using Javalin, you can have a look at this github
+repository: [java-htmx-todo](https://github.com/AussieGuy0/java-htmx-todo/)
+
+![](/media/htmx-1/todo.png)
