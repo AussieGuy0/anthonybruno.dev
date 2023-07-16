@@ -1,5 +1,5 @@
 # anthonybruno.dev
-Personal website hosted at anthonybruno.dev. Uses 
+Personal website hosted at anthonybruno.dev. Uses
 [Jekyll](https://jekyllrb.com).
 
 ## Running locally
@@ -7,13 +7,15 @@ Personal website hosted at anthonybruno.dev. Uses
 ### Pre-reqs
 - Docker
 - Go (1.13+)
-- Goodreads API key (https://www.goodreads.com/api)
 
 ### Commands
 
 ## Build and serve site
 `make serve`
 
+## Pull read books from Goodreads
+`make fetch_goodreads`
+
 ## Run everything
-`GOODREADS_KEY="<GOODREADS_API_KEY>" make all`
+`make all`
 

@@ -2,7 +2,6 @@ jekyll_version=4.2.2
 
 all: fetch_til serve
 
-# Goodreads decided to kill the API :(
 fetch_goodreads:
 	- cd _scripts/goodreads && go run ./*.go
 

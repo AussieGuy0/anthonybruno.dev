@@ -1,8 +1,28 @@
+repository: AussieGuy0/AussieGuy0.github.io
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+highlighter: rouge
+permalink: pretty
+exclude:
+  - CNAME
+  - Makefile
+  - vendor
+collections:
+  read_books:
+    output: true
+  tils:
+    output: true
+
+# SEO
 title: Anthony Bruno
 description: "Anthony Bruno - Software Engineer"
 url: https://anthonybruno.dev
-author: DownUnder_Dev
-repository: AussieGuy0/AussieGuy0.github.io
+logo: "/favicon.ico"
+author:
+  name: Anthony Bruno
+  twitter: DownUnder_Dev
+  url: https://anthonybruno.dev
 twitter:
   username: DownUnder_Dev
   card: summary
@@ -13,16 +33,3 @@ social:
     - https://github.com/AussieGuy0
     - https://dev.to/aussieguy
     - https://au.linkedin.com/in/anthonybruno1996
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
-highlighter: rouge
-exclude:
-  - CNAME
-  - Makefile
-  - vendor
-collections:
-  read_books:
-    output: true
-  tils:
-    output: true
