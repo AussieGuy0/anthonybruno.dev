@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Full stack web development in a single Java file: An intro to Javalin and htmx"
+redirect_from:
+  - /2023/06/11/full-stack-development-in-a-single-java-file.html
 tags: Java Htmx
 ---
 

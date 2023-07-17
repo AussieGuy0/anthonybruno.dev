@@ -2,6 +2,7 @@ repository: AussieGuy0/AussieGuy0.github.io
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-redirect-from
 highlighter: rouge
 permalink: pretty
 exclude:
