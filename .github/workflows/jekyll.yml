@@ -1,6 +1,12 @@
 name: Jekyll Build and Deploy
 
-on: [push]
+on:
+  push:
+    branches:
+      - '*'
+  schedule:
+    cron:
+      - '30 11 * * *'
 
 jobs:
 
