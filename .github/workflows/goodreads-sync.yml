@@ -1,0 +1,20 @@
+name: Goodreads Sync
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  goodreads:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-go@v4
+        with:
+          go-version: '1.20'  # Specify the version of Go you are using
+
+      - name: Run Go program
+        run: go run _scripts/goodreads/*.go
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
