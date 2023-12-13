@@ -46,7 +46,7 @@ func GetReadBooks(userId int) ([]ReadBook, error) {
 }
 
 func (readBook ReadBook) ReadAtTime() (time.Time, error) {
-    layout := "Mon, 2 Jan 2006 15:04:05 -0700"
+	layout := "Mon, 2 Jan 2006 15:04:05 -0700"
 	if len(readBook.ReadAt) != 0 {
 		return time.Parse(layout, readBook.ReadAt)
 	}
