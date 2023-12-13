@@ -1,6 +1,8 @@
 name: Goodreads Sync
 
-on: [push]
+on:
+    schedule:
+      - cron: '30 11 * * *' # 11:30 UTC (Night in Australia)
 
 jobs:
   goodreads:
@@ -10,10 +12,11 @@ jobs:
 
       - uses: actions/setup-go@v4
         with:
-          go-version: '1.20'  # Specify the version of Go you are using
+          go-version: '1.20'
 
       - name: Run Go program
         working-directory: _scripts/goodreads
         run: go run *.go
 
       - uses: stefanzweifel/git-auto-commit-action@v5
+        commit_message: 'Sync goodreads'
