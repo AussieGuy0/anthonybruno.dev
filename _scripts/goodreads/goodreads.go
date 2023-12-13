@@ -46,11 +46,12 @@ func GetReadBooks(userId int) ([]ReadBook, error) {
 }
 
 func (readBook ReadBook) ReadAtTime() (time.Time, error) {
+	layout := "Mon, 2 Jan 2006 15:04:05 -0700"
 	if len(readBook.ReadAt) != 0 {
-		return time.Parse(time.RFC1123Z, readBook.ReadAt)
+		return time.Parse(layout, readBook.ReadAt)
 	}
 	// Fallback to added date if no ReadAt date.
-	return time.Parse(time.RFC1123Z, readBook.Added)
+	return time.Parse(layout, readBook.Added)
 }
 
 func makeReadBooksRequest(userId int) (*http.Response, error) {
