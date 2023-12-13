@@ -13,6 +13,7 @@ jobs:
           go-version: '1.20'  # Specify the version of Go you are using
 
       - name: Run Go program
-        run: go run _scripts/goodreads/*.go
+        working-directory: _scripts/goodreads
+        run: go run *.go
 
       - uses: stefanzweifel/git-auto-commit-action@v5
