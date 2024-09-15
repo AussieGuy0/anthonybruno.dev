@@ -9,6 +9,8 @@ exclude:
   - CNAME
   - Makefile
   - vendor
+  - Dockerfile
+  - docker-compose.yml
 collections:
   read_books:
     output: true
