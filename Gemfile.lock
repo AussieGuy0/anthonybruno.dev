@@ -80,7 +80,6 @@ DEPENDENCIES
   jekyll-redirect-from
   jekyll-seo-tag
   rouge
-  webrick
 
 BUNDLED WITH
    2.4.0
