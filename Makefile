@@ -12,5 +12,4 @@ new_post:
 	- cd _scripts && ./createPost.sh
 
 serve:
-	docker run --rm --volume="$(PWD):/srv/jekyll" --volume="$(PWD)/vendor/bundle:/usr/local/bundle" -p 4000:4000 -p 35729:35729 -it jekyll/jekyll:$(jekyll_version) jekyll serve --livereload
-
+	docker compose up
