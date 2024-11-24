@@ -155,12 +155,13 @@ pre {
 }
 
 footer {
+    background-color: black;
     padding-top: 5px;
     border-top: #cfcfcf 1px solid;
 }
 
 .social-media-icons {
-    max-width: 720px;
+    max-width: 740px;
     margin: 0px auto;
     padding-left: 10px;
 }

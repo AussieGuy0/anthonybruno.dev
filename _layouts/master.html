@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title> {{ page.title }} </title>
@@ -14,38 +15,39 @@
         }
     </style>
     {% seo %}
-  </head>
-  <body>
-      <div class="wrapper">
-          <header class="nav-bar">
-             <div class="nav-bar__brand">
-                 <a href="/">
-                    <img src="/favicon.ico"/>
-                 </a>
-                 <h1 class="nav-bar__title">Anthony Bruno</h1>
-             </div>
-             <div class="nav-bar__links">
-                 <a href="{{ site.url }}">Home</a> ·
-                 <a href="{{ site.url }}/aboutme">About Me</a> ·
-                 <a href="{{ site.url }}/projects">Projects</a>
-             </div>
-          </header>
-          <main>
-          {{ content }}
-          </main>
-      </div>
-     <footer>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="nav-bar">
+            <div class="nav-bar__brand">
+                <a href="/">
+                    <img src="/favicon.ico" />
+                </a>
+                <h1 class="nav-bar__title">Anthony Bruno</h1>
+            </div>
+            <div class="nav-bar__links">
+                <a href="{{ site.url }}">Home</a> ·
+                <a href="{{ site.url }}/aboutme">About Me</a> ·
+                <a href="{{ site.url }}/projects">Projects</a>
+            </div>
+        </header>
+        <main>
+            {{ content }}
+        </main>
+    </div>
+    <footer>
         <div class="social-media-icons">
-            <a href="https://twitter.com/DownUnder_Dev">Twitter</a>
+            <a href="https://bsky.app/profile/anthonybruno.dev">Bluesky</a>
             <a href="https://github.com/AussieGuy0">Github</a>
             <a href="https://dev.to/aussieguy">Dev.to</a>
             <a href="https://au.linkedin.com/in/anthonybruno1996">LinkedIn</a>
             <a href="mailto:hello@anthonybruno.dev">Email</a>
             <a href="/feed.xml">RSS</a>
         </div>
-      </footer>
-      <script data-goatcounter="https://anthonybruno.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-      <link rel="stylesheet" href="{{ site.url }}/stylesheets/styles.css">
-  </body>
+    </footer>
+    <script data-goatcounter="https://anthonybruno.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <link rel="stylesheet" href="{{ site.url }}/stylesheets/styles.css">
+</body>
+
 </html>
