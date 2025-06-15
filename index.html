@@ -3,23 +3,31 @@ layout: master
 title: Home
 ---
 <section class="main-page-section">
-    <h1>Hey there!</h1>
-    <p>I'm Anthony Bruno, a software engineer from Australia. This is my website where I document my journey in the wonderful field of programming. Learn more <a href="/aboutme">about me</a>, see <a href="/projects"> my projects</a>, view the <a href="/books">books I've read</a>, read <a href="/til">my TILs</a>, or simply scroll down to see some things I've written.</p>
+    <img src="/media/avatar.png" alt="Anthony Bruno" class="main-page-section__profile-pic">
+    <div class="main-page-section__content">
+        <h1>Hey there!</h1>
+        <p>I'm Anthony Bruno, a software engineer from Australia. This is my website where I document my journey in the
+            wonderful field of programming.</p>
+        <p>Learn more <a href="/aboutme">about me</a>, see <a href="/projects"> my projects</a>, view the <a
+                href="/books">books I've read</a>, read <a href="/til">my TILs</a>, or simply scroll down to see some
+            things
+            I've written.</p>
+    </div>
 </section>
 
 <h1 class="page-title"> Articles </h1>
 {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 {% for year in postsByYear %}
-  <h2>{{ year.name }}</h2>
-  {% for post in year.items %}
-  <article class="blog-snippet">
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      <div>
+<h2>{{ year.name }}</h2>
+{% for post in year.items %}
+<article class="blog-snippet">
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <div>
         <span class="text-muted">{{post.date | date: "%-d %B"}}</span>
         {% for tag in post.tags %}
         <span class="tag">{{tag}}</span>
         {% endfor %}
-      </div>
-  </article>
-  {% endfor %}
+    </div>
+</article>
+{% endfor %}
 {% endfor %}
