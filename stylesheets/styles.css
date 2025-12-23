@@ -3,6 +3,41 @@
     --mobile-font-size: 16px;
     --primary-green: #27ae60;
     --border-light: #e9ecef;
+
+    /* Light mode colors (default) */
+    --bg-color: #fdfdfd;
+    --text-color: #000000;
+    --text-muted: grey;
+    --footer-bg: #f8f9fa;
+    --footer-border: #e8e8e8;
+    --cta-bg: #f2ffda;
+    --code-bg: #f0f0f0;
+    --about-bg: #fbfbfb;
+    --tag-bg: #eee;
+    --tag-text: #535353;
+    --nav-text: #000000;
+}
+
+/* Dark mode colors */
+#dark-mode-toggle:checked ~ .wrapper,
+#dark-mode-toggle:checked ~ footer {
+    --bg-color: #1a1a1a;
+    --text-color: #e4e4e4;
+    --text-muted: #a0a0a0;
+    --footer-bg: #0f0f0f;
+    --footer-border: #333333;
+    --cta-bg: #1f3a1f;
+    --code-bg: #2a2a2a;
+    --about-bg: #202020;
+    --tag-bg: #333333;
+    --tag-text: #cccccc;
+    --nav-text: #e4e4e4;
+    --border-light: #333333;
+}
+
+/* Hide the checkbox */
+#dark-mode-toggle {
+    display: none;
 }
 
 * {
@@ -18,7 +53,9 @@ body {
     font-family: 'Helvetica', 'Avenir', 'Arial', sans-serif;
     margin: 0;
     font-size: var(--default-font-size);
-    background-color: #fdfdfd;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main {
@@ -79,7 +116,7 @@ pre {
 }
 
 :not(pre)>code {
-    background: #f0f0f0;
+    background: var(--code-bg);
     padding: 1px 3px;
 }
 
@@ -104,7 +141,7 @@ pre {
 }
 
 .nav-bar__brand a {
-    color: #000000;
+    color: var(--nav-text);
     text-decoration: none !important;
 }
 
@@ -148,9 +185,8 @@ pre {
 
 .post .post__cta {
     padding: 20px 10px 20px 10px;
-    background: #f2ffda;
+    background: var(--cta-bg);
     margin-bottom: 5px;
-    background: #f2ffda;
     border-radius: 8px;
     border-left: 4px solid var(--primary-green);
 }
@@ -170,7 +206,7 @@ pre {
 .aboutme__img-container {
     display: flex;
     justify-content: center;
-    background: #fbfbfb;
+    background: var(--about-bg);
     border-radius: 6px;
     margin-bottom: 10px;
 }
@@ -180,11 +216,12 @@ pre {
 }
 
 footer {
-    background-color: #f8f9fa;
-    border-top: 1px solid #e8e8e8;
+    background-color: var(--footer-bg);
+    border-top: 1px solid var(--footer-border);
     padding-top: 18px;
     padding-bottom: 10px;
     margin-top: 48px;
+    transition: background-color 0.3s ease;
 }
 
 .footer__container {
@@ -200,18 +237,18 @@ footer {
 }
 
 .text-muted {
-    color: grey;
+    color: var(--text-muted);
 }
 
 .tag {
-    background: #eee;
-    color: #535353;
+    background: var(--tag-bg);
+    color: var(--tag-text);
     padding: 3px 5px;
 }
 
 .main-page-section {
     padding: 24px;
-    background: #f2ffda;
+    background: var(--cta-bg);
     border-radius: 8px;
     margin-bottom: 32px;
     border-left: 4px solid var(--primary-green);
@@ -265,6 +302,40 @@ footer {
     width: 20%;
 }
 
+/* Dark mode toggle button */
+.dark-mode-toggle-label {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 26px;
+    background-color: #ccc;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.dark-mode-toggle-label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#dark-mode-toggle:checked ~ .dark-mode-toggle-label {
+    background-color: var(--primary-green);
+}
+
+#dark-mode-toggle:checked ~ .dark-mode-toggle-label:after {
+    transform: translateX(24px);
+}
+
 @media only screen and (max-width: 420px) {
     .nav-bar__title {
         display: none;
@@ -284,5 +355,10 @@ footer {
     .main-page-section__profile-pic {
         width: 100px;
         height: 100px;
+    }
+
+    .dark-mode-toggle-label {
+        top: 10px;
+        right: 10px;
     }
 }
