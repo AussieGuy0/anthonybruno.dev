@@ -168,15 +168,7 @@ pre {
 }
 
 .aboutme__img-container {
-    display: flex;
-    justify-content: center;
-    background: #fbfbfb;
-    border-radius: 6px;
     margin-bottom: 10px;
-}
-
-.aboutme__img-container img {
-    max-width: 400px;
 }
 
 footer {
