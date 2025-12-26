@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title> {{ page.title }} </title>
-    <link rel="stylesheet" href="{{ site.url }}/stylesheets/syntax.css">
+    <link rel="stylesheet" href="{{ "/stylesheets/syntax.css" | relative_url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="robots" content="index,follow">
     <link type="image/x-icon" rel="icon" href="{{ site.url }}/favicon.ico">
@@ -50,7 +50,7 @@
         </div>
     </footer>
     <script data-goatcounter="https://anthonybruno.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-    <link rel="stylesheet" href="{{ site.url }}/stylesheets/styles.css?{{ site.time  | date: '%s' }}">
+    <link rel="stylesheet" href="{{ "/stylesheets/styles.css" | relative_url }}?{{ site.time  | date: '%s' }}">
 </body>
 
 </html>
