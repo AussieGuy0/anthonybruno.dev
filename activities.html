@@ -1,0 +1,32 @@
+---
+layout: master
+title: Strava Activities
+---
+<h1>Activities</h1>
+<p>Here's a list of my recent activities from <a href="https://www.strava.com">Strava</a>.</p>
+{% assign sorted_activities = site.activities | sort: 'date' | reverse %}
+{% for activity in sorted_activities %}
+<ul class="activities__list">
+    <li>
+        <span class="text-muted">{{ activity.date | date_to_string }}</span>
+        <a href="{{ activity.url }}">{% if activity.activity_type == "Run" %}🏃
+        {% elsif activity.activity_type == "Walk" %}🚶
+        {% elsif activity.activity_type == "Ride" %}🚴
+        {% elsif activity.activity_type == "Swim" %}🏊
+        {% elsif activity.activity_type == "Hike" %}🥾
+        {% elsif activity.activity_type == "Workout" %}💪
+        {% elsif activity.activity_type == "WeightTraining" %}🏋️
+        {% elsif activity.activity_type == "Yoga" %}🧘
+        {% else %}🏃
+        {% endif %}
+        {{ activity.activity_type }}</a> -
+        {% if activity.activity_type == "Run" or activity.activity_type == "Walk" %}
+            {{ activity.distance_km }} km • {{ activity.moving_time_formatted }} • {{ activity.pace_min_per_km }}/km
+        {% elsif activity.activity_type == "Workout" or activity.activity_type == "WeightTraining" or activity.activity_type == "Yoga" %}
+            {{ activity.moving_time_formatted }}
+        {% else %}
+            {{ activity.distance_km }} km • {{ activity.moving_time_formatted }}
+        {% endif %}
+    </li>
+</ul>
+{% endfor %}

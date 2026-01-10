@@ -16,6 +16,8 @@ collections:
     output: true
   tils:
     output: true
+  activities:
+    output: true
 
 # SEO
 title: Anthony Bruno

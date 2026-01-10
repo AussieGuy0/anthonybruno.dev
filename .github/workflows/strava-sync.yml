@@ -1,0 +1,27 @@
+name: Strava Sync
+
+on:
+    schedule:
+      - cron: '0 12 * * *' # Daily at 12:00 UTC (Night in Australia)
+
+jobs:
+  strava:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-go@v6
+        with:
+          go-version: '1.20'
+
+      - name: Run Go program
+        working-directory: _scripts/strava
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: go run main.go strava.go jekyll.go
+
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: 'Sync strava activities'
