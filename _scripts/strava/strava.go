@@ -92,10 +92,6 @@ func (activity Activity) DistanceKm() float64 {
 	return activity.Distance / 1000.0
 }
 
-func (activity Activity) DistanceMiles() float64 {
-	return activity.Distance / 1609.34
-}
-
 func (activity Activity) MovingTimeFormatted() string {
 	duration := time.Duration(activity.MovingTime) * time.Second
 	hours := int(duration.Hours())
@@ -112,10 +108,6 @@ func (activity Activity) AverageSpeedKmh() float64 {
 	return activity.AverageSpeed * 3.6
 }
 
-func (activity Activity) AverageSpeedMph() float64 {
-	return activity.AverageSpeed * 2.23694
-}
-
 func (activity Activity) PaceMinPerKm() string {
 	if activity.AverageSpeed == 0 {
 		return "0:00"
@@ -123,16 +115,6 @@ func (activity Activity) PaceMinPerKm() string {
 	secondsPerKm := 1000.0 / activity.AverageSpeed
 	minutes := int(secondsPerKm / 60)
 	seconds := int(secondsPerKm) % 60
-	return fmt.Sprintf("%d:%02d", minutes, seconds)
-}
-
-func (activity Activity) PaceMinPerMile() string {
-	if activity.AverageSpeed == 0 {
-		return "0:00"
-	}
-	secondsPerMile := 1609.34 / activity.AverageSpeed
-	minutes := int(secondsPerMile / 60)
-	seconds := int(secondsPerMile) % 60
 	return fmt.Sprintf("%d:%02d", minutes, seconds)
 }
 

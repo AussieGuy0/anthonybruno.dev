@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -31,7 +31,7 @@ func writeActivity(activity *Activity, path string) error {
 
 	filePath := path + "/" + filename
 	log.Println("Writing to " + filePath)
-	err = ioutil.WriteFile(filePath, []byte(str), 0644)
+	err = os.WriteFile(filePath, []byte(str), 0644)
 	if err != nil {
 		return err
 	}
@@ -56,16 +56,12 @@ func generateActivityString(activity *Activity) string {
 	writeKey(&sb, "title", activity.Type)
 	writeKey(&sb, "activity_type", activity.Type)
 	writeKey(&sb, "distance_km", fmt.Sprintf("%.2f", activity.DistanceKm()))
-	writeKey(&sb, "distance_miles", fmt.Sprintf("%.2f", activity.DistanceMiles()))
 	writeKey(&sb, "moving_time", strconv.Itoa(activity.MovingTime))
 	writeKey(&sb, "moving_time_formatted", activity.MovingTimeFormatted())
 	writeKey(&sb, "elapsed_time", strconv.Itoa(activity.ElapsedTime))
 	writeKey(&sb, "elevation_gain", fmt.Sprintf("%.1f", activity.TotalElevationGain))
 	writeKey(&sb, "average_speed_kmh", fmt.Sprintf("%.2f", activity.AverageSpeedKmh()))
-	writeKey(&sb, "average_speed_mph", fmt.Sprintf("%.2f", activity.AverageSpeedMph()))
 	writeKey(&sb, "pace_min_per_km", "\""+activity.PaceMinPerKm()+"\"")
-	writeKey(&sb, "pace_min_per_mile", "\""+activity.PaceMinPerMile()+"\"")
-	writeKey(&sb, "strava_link", fmt.Sprintf("https://www.strava.com/activities/%d", activity.Id))
 	writeKey(&sb, "layout", "activity")
 	sb.WriteString("---\n")
 

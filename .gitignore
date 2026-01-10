@@ -4,3 +4,7 @@ _site/
 .jekyll-metadata
 vendor/
 .env
+
+# Go executables
+_scripts/strava/strava
+_scripts/strava/authorize/authorize
