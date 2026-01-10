@@ -1,3 +1,3 @@
 module anthonybruno.dev/scripts/strava/authorize
 
-go 1.25.4
+go 1.25
